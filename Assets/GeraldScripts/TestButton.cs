@@ -5,6 +5,7 @@ using UnityEngine;
 public class TestButton : MonoBehaviour
 {
     [SerializeField]private GameObject platformToActivate;
+    [SerializeField]private GameObject doorToOpen;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +17,14 @@ public class TestButton : MonoBehaviour
     {
         
     }
-
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Player")){
-            platformToActivate.GetComponent<TestPlatform>().setActive = true;
-        }
+            doorToOpen.GetComponent<Door>().opening = true;
+        } 
+    }
+    private void OnTriggerExit(Collider other) {
+        if(other.CompareTag("Player")){
+            doorToOpen.GetComponent<Door>().opening = false;
+        } 
     }
 }

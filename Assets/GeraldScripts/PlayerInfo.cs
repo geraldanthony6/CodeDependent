@@ -5,36 +5,32 @@ using Photon.Pun;
 
 public class PlayerInfo : MonoBehaviour
 {
-    [SerializeField]private int playerNum = 0;
-    [SerializeField]private GameObject friend;
-    [SerializeField]PhotonView view;
+
+    private PhotonView view;
+   
 
     private void Awake() {
-        if(PhotonNetwork.IsMasterClient){
-            playerNum = 0;
-            TestGameManager.Instance.SetPlayer1(gameObject);
-        } else {
-            playerNum = 1;
-            TestGameManager.Instance.SetPlayer2(gameObject);
-        }
+        view = GetComponent<PhotonView>();
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(view.IsMine && PhotonNetwork.IsMasterClient){
+            foreach (GameObject gameObject in TestGameManager.Instance.GetPlayerOneObjects())
+            {
+                gameObject.SetActive(true);
+            }
+        } else if(view.IsMine && !PhotonNetwork.IsMasterClient){
+            foreach (GameObject gameObject in TestGameManager.Instance.GetPlayerTwoObjects())
+            {
+                gameObject.SetActive(true);
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-    [PunRPC]
-    public void SetPlayerNum(int playerNum){
-        this.playerNum = playerNum;
-    }
-    [PunRPC]
-    public void SetOtherPlayer(GameObject otherPlayer){
-        friend = otherPlayer;
     }
 }

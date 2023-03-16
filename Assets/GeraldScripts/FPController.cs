@@ -27,16 +27,16 @@ public class FPController : MonoBehaviour
         _characterController = GetComponent<CharacterController>();
 
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;        
+        Cursor.visible = false;  
+
+        if(!_view.IsMine){
+            Destroy(GetComponentInChildren<Camera>().gameObject);
+        }      
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(_playerCamera.gameObject.GetPhotonView().IsMine){
-            _playerCamera.enabled = true;
-        }
-
         if(_view.IsMine){
             
             Vector3 forward = transform.TransformDirection(Vector3.forward);
@@ -52,6 +52,16 @@ public class FPController : MonoBehaviour
             _rotationX = Mathf.Clamp(_rotationX, -_lookXLimit, _lookXLimit);
         }
 
+        if(Input.GetKeyDown(KeyCode.Alpha1)){
+            _view.RPC("UpdateGameScore", RpcTarget.All);
+        }
+    }
 
+    [PunRPC]
+    void UpdateGameScore()
+    {
+        if(!_view.IsMine)
+            return;
+        TestGameManager.Instance.UpdateScore(1);
     }
 }
