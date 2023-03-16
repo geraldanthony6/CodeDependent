@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/NewMultiplayerTestScenes/InitialScene.unity
+    guid: f3e3b05a771a79146a4cb61675a9f27e
+  - enabled: 1
     path: Assets/Scenes/TestMultiplayerScenes/Loading.unity
     guid: 722c8536e87f7754eac3b27f68f9c9b1
   - enabled: 1
@@ -14,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestMultiplayerScenes/Game.unity
     guid: da771fcb7a002ea489d2144ea0103a3b
+  - enabled: 1
+    path: Assets/Scenes/NewMultiplayerTestScenes/GameSceneTest.unity
+    guid: 49d33d30c489945428157303b2fb7590
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}
