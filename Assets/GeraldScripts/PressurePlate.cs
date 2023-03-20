@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestButton : MonoBehaviour
+public class PressurePlate : MonoBehaviour
 {
-    [SerializeField]private GameObject platformToActivate;
-    [SerializeField]private GameObject doorToOpen;
+    [SerializeField]private GameObject pressurePlateVisual; 
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
@@ -17,14 +16,17 @@ public class TestButton : MonoBehaviour
     {
         
     }
+
     private void OnTriggerEnter(Collider other) {
+        Debug.Log("Stepped On");
         if(other.CompareTag("Player")){
-            doorToOpen.GetComponent<Door>().opening = true;
-        } 
+            pressurePlateVisual.SetActive(true);
+        }
     }
+
     private void OnTriggerExit(Collider other) {
         if(other.CompareTag("Player")){
-            doorToOpen.GetComponent<Door>().opening = false;
-        } 
+            pressurePlateVisual.SetActive(false);
+        }
     }
 }
