@@ -1030,6 +1030,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: VRPlayerPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1372909418646294799, guid: a76692bd72e2446f49dcc2d10ec7d57c,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1916200032}
+    - target: {fileID: 1372909418646294799, guid: a76692bd72e2446f49dcc2d10ec7d57c,
+        type: 3}
+      propertyPath: m_MaxRaycastDistance
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261989328647168741, guid: a76692bd72e2446f49dcc2d10ec7d57c,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1916200032}
+    - target: {fileID: 4261989328647168741, guid: a76692bd72e2446f49dcc2d10ec7d57c,
+        type: 3}
+      propertyPath: m_MaxRaycastDistance
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 4815185240119943124, guid: a76692bd72e2446f49dcc2d10ec7d57c,
         type: 3}
       propertyPath: sceneViewId
@@ -1045,6 +1065,16 @@ PrefabInstance:
       propertyPath: ObservedComponents.Array.data[0]
       value: 
       objectReference: {fileID: 275976787}
+    - target: {fileID: 5450672181018963171, guid: a76692bd72e2446f49dcc2d10ec7d57c,
+        type: 3}
+      propertyPath: m_LineLength
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195927490930642864, guid: a76692bd72e2446f49dcc2d10ec7d57c,
+        type: 3}
+      propertyPath: m_LineLength
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a76692bd72e2446f49dcc2d10ec7d57c, type: 3}
 --- !u!114 &275976787 stripped
@@ -1784,7 +1814,8 @@ MonoBehaviour:
   m_EnableMouseInput: 1
   m_EnableTouchInput: 1
   m_PointAction: {fileID: 0}
-  m_LeftClickAction: {fileID: 0}
+  m_LeftClickAction: {fileID: -6395602842196007441, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
   m_MiddleClickAction: {fileID: 0}
   m_RightClickAction: {fileID: 0}
   m_ScrollWheelAction: {fileID: 0}
@@ -4044,7 +4075,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 340, y: 50}
+  m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1017680106
 MonoBehaviour:
@@ -4075,8 +4106,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5780,7 +5811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 72}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1526504083
@@ -6080,6 +6111,7 @@ GameObject:
   - component: {fileID: 1581741181}
   - component: {fileID: 1581741180}
   - component: {fileID: 1581741179}
+  - component: {fileID: 1581741185}
   m_Layer: 5
   m_Name: VRCanvas
   m_TagString: Untagged
@@ -6196,7 +6228,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581741178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 112.9}
+  m_LocalPosition: {x: 0, y: 0, z: 440}
   m_LocalScale: {x: 0.54144347, y: 0.54144347, z: 0.54144347}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6211,9 +6243,28 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 2.4}
+  m_SizeDelta: {x: 600, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1581741185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581741178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &1595740347
 GameObject:
   m_ObjectHideFlags: 0
