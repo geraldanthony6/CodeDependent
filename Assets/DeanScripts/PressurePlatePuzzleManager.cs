@@ -23,6 +23,8 @@ public class PressurePlatePuzzleManager : MonoBehaviour
     }
 
     public void checkProgress(GameObject plate) {
-        if(plate)
+        if(plate) {
+            
+        }
     }
 }
