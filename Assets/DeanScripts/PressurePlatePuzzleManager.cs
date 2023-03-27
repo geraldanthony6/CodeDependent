@@ -7,9 +7,12 @@ using Photon.Pun;
 public class PressurePlatePuzzleManager : MonoBehaviour
 {
     public static PressurePlatePuzzleManager instance;
-
-    [SerializeField]private GameObject[] playerOneGameObjects = new GameObject[3];
+    [SerializeField]private OverallPuzzleManager overallManager;
+    [SerializeField]private PressurePlate[] platesInOrder = new PressurePlate[3];
+    [SerializeField]private GameObject completionIndicator;
     private int progress = 0;
+    private bool done = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +25,21 @@ public class PressurePlatePuzzleManager : MonoBehaviour
         
     }
 
-    public void checkProgress(GameObject plate) {
-        if(plate) {
-            
+    public void checkProgress(PressurePlate plate) {
+        if(plate == platesInOrder[progress]) {
+            platesInOrder[progress].stayLit() ;
+            if(progress < platesInOrder.Length - 1) {
+                progress++;
+            } else {
+                done = true;
+            }
+        } else {
+            for(int i = 0; i < platesInOrder.Length; i++) {
+                platesInOrder[i].failure();
+            }
+        }
+        if(done) {
+            overallManager.complete(0);
         }
     }
 }
