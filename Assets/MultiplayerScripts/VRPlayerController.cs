@@ -29,7 +29,6 @@ public class VRPlayerController : MonoBehaviour
             ActionBasedContinuousMoveProvider.enabled = true;
             ActionBasedContinuousTurnProvider.enabled = true;
             CharacterControllerDriver.enabled = true;
-            CharacterController.enabled = true;
         } 
     }
 
