@@ -30,10 +30,12 @@ public class PressurePlatePuzzleManager : MonoBehaviour
             platesInOrder[progress].stayLit() ;
             if(progress < platesInOrder.Length - 1) {
                 progress++;
+                Debug.Log(progress);
             } else {
                 done = true;
             }
         } else {
+            progress = 0;
             for(int i = 0; i < platesInOrder.Length; i++) {
                 platesInOrder[i].failure();
             }

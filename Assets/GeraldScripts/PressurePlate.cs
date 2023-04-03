@@ -21,10 +21,12 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         Debug.Log("Stepped On");
+        if(!(pressurePlateVisual.activeSelf)) {
+            manager.checkProgress(this);
+        }
         if(other.CompareTag("Player")){
             pressurePlateVisual.SetActive(true);
         }
-        manager.checkProgress(this);
     }
 
     private void OnTriggerExit(Collider other) {
