@@ -14,6 +14,8 @@ public class VRPlayerController : MonoBehaviour
     [SerializeField]private ActionBasedContinuousTurnProvider ActionBasedContinuousTurnProvider;
     [SerializeField]private CharacterControllerDriver CharacterControllerDriver;
     [SerializeField]private CharacterController CharacterController;
+    [SerializeField] private XRRayInteractor rightHand;
+    [SerializeField] private XRRayInteractor leftHand;
     public GameObject xrOrigin;
     
 
@@ -29,6 +31,8 @@ public class VRPlayerController : MonoBehaviour
             ActionBasedContinuousMoveProvider.enabled = true;
             ActionBasedContinuousTurnProvider.enabled = true;
             CharacterControllerDriver.enabled = true;
+            rightHand.interactionManager = GameObject.FindObjectOfType<XRInteractionManager>();
+            leftHand.interactionManager = GameObject.FindObjectOfType<XRInteractionManager>();
         } 
     }
 

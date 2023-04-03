@@ -336,6 +336,8 @@ MonoBehaviour:
   ActionBasedContinuousTurnProvider: {fileID: 4221496672755550255}
   CharacterControllerDriver: {fileID: 5240701655936281089}
   CharacterController: {fileID: 6983397372012510358}
+  rightHand: {fileID: 6122696191238421061}
+  leftHand: {fileID: 4088774691511713774}
   xrOrigin: {fileID: 854846890156264979}
 --- !u!1 &2110046221542307673
 GameObject:
@@ -1759,7 +1761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4205616644498089440
 Transform:
   m_ObjectHideFlags: 0
