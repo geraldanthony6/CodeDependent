@@ -106,4 +106,9 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.LoadLevel(4);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

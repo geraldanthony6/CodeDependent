@@ -29,4 +29,8 @@ public class Door : MonoBehaviour
     public void Close(){
         transform.position = Vector3.MoveTowards(transform.position, closePosition.position, 3 * Time.deltaTime);
     }
+
+    public void ChangeOpening(){
+        opening = !opening;
+    }
 }

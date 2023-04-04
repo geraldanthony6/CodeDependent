@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4221496672755550255}
   - component: {fileID: 3022792397820369785}
   - component: {fileID: 1578410044283291115}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: XR Origin
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -99,13 +99,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 1
   m_Radius: 2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 1, y: 1, z: 0}
 --- !u!114 &8059465959884518313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 4815185240119943124}
   - component: {fileID: 9081688764302788328}
   - component: {fileID: 8503180595772893310}
+  - component: {fileID: 1506867366397800701}
   m_Layer: 0
   m_Name: VRPlayerPrefab
   m_TagString: Untagged
@@ -339,6 +340,18 @@ MonoBehaviour:
   rightHand: {fileID: 6122696191238421061}
   leftHand: {fileID: 4088774691511713774}
   xrOrigin: {fileID: 854846890156264979}
+--- !u!114 &1506867366397800701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985717167574460577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ccc4b8743b76f45a89ebbd9500b654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2110046221542307673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,17 +1819,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6de282c1ac400414fa1c823ad87f7e7d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6de282c1ac400414fa1c823ad87f7e7d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -0.78
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6de282c1ac400414fa1c823ad87f7e7d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.954
+      value: -0.76
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6de282c1ac400414fa1c823ad87f7e7d,
         type: 3}
