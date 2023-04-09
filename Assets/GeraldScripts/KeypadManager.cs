@@ -52,6 +52,7 @@ public class KeypadManager : MonoBehaviour
         Debug.Log("Enter Pressed");
         if(currentCode == correctCode){
             output.gameObject.GetComponent<Image>().color = Color.green;
+            AudioManager.Instance.PlayRoomTwoCompletedAudio();
         } else {
             output.gameObject.GetComponent<Image>().color = Color.red;
             currentCode = "";

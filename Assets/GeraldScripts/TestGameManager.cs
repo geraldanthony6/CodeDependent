@@ -7,10 +7,10 @@ using Photon.Pun;
 public class TestGameManager : MonoBehaviourPunCallbacks
 {
     public static TestGameManager Instance;
-    // [SerializeField]private GameObject player1;
-    // [SerializeField]private GameObject player2;
     [SerializeField]private TextMeshProUGUI _scoreText;
     [SerializeField]private int _score;
+    [SerializeField]private GameObject playerOne;
+    [SerializeField]private GameObject playerTwo;
     [SerializeField]private List<GameObject> playerOneGameObjects;
     [SerializeField]private List<GameObject> playerTwoGameObjects;
 
@@ -31,6 +31,22 @@ public class TestGameManager : MonoBehaviourPunCallbacks
     void Update()
     {
         _scoreText.text = "Score: " + _score;
+    }
+    [PunRPC]
+    public void SetPlayerOne(GameObject player){
+        playerOne = player;
+    }
+
+    public GameObject GetPlayerOne(){
+        return playerOne;
+    }
+    [PunRPC]
+    public void SetPlayerTwo(GameObject player){
+        playerTwo = player;
+    }
+
+    public GameObject GetPlayerTwo(){
+        return playerTwo;
     }
 
     public void UpdateScore(int addToScore)

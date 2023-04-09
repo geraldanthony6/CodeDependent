@@ -6,9 +6,10 @@ using Photon.Pun;
 
 public class VRPlayerController : MonoBehaviour
 {
-    [SerializeField]private GameObject playerVisual;
     private PhotonView view;
+    [SerializeField]private GameObject playerVisual;
     [SerializeField]private GameObject cameraOffset;
+    [SerializeField]private PlayerInfo playerInfo;
     [SerializeField]private LocomotionSystem LocomotionSystem;
     [SerializeField]private ActionBasedContinuousMoveProvider ActionBasedContinuousMoveProvider;
     [SerializeField]private ActionBasedContinuousTurnProvider ActionBasedContinuousTurnProvider;

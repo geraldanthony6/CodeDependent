@@ -332,6 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerVisual: {fileID: 1785625936733111497}
   cameraOffset: {fileID: 2110046221542307673}
+  playerInfo: {fileID: 1506867366397800701}
   LocomotionSystem: {fileID: 8059465959884518313}
   ActionBasedContinuousMoveProvider: {fileID: 4770377297363306223}
   ActionBasedContinuousTurnProvider: {fileID: 4221496672755550255}

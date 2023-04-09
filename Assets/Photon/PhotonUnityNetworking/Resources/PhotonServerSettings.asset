@@ -48,6 +48,8 @@ MonoBehaviour:
   - changeColorBlue
   - changeColorRed
   - ChangeColor
+  - SetPlayerOne
+  - SetPlayerTwo
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

@@ -24,6 +24,8 @@ public class Pipe : MonoBehaviour
         if(other.CompareTag("Ball") && isCorrectPipe){
             correctDoor.ChangeOpening();
             other.transform.position = pipeEnd.position;
+            AudioManager.Instance.PlayRoomOneCompletedAudio();
+            
         } else if(other.CompareTag("Ball") && !isCorrectPipe){
             wrongDoor.ChangeOpening();
             other.transform.position = pipeEnd.position;
