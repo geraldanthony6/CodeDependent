@@ -10,7 +10,8 @@ public class OverallPuzzleManager : MonoBehaviour
 {
     public static OverallPuzzleManager instance;
 
-    [SerializeField]private PuzzleLights[] lights = new PuzzleLights[3];
+    [SerializeField]private PuzzleLights[] player1Lights = new PuzzleLights[3];
+    [SerializeField]private PuzzleLights[] player2Lights = new PuzzleLights[3];
     [SerializeField]private Material[] completeMat;
 
     // Start is called before the first frame update
@@ -25,7 +26,15 @@ public class OverallPuzzleManager : MonoBehaviour
         
     }
 
+    public void CompletePlayerOnePuzzle(int i) {
+        player1Lights[i].indicateCompletion();
+    }
+
+    public void CompletePlayerTwoPuzzle(int i) {
+        player2Lights[i].indicateCompletion();
+    }
+
     public void complete(int i) {
-        lights[i].indicateCompletion();
+
     }
 }

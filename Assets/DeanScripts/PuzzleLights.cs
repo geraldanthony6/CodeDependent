@@ -6,6 +6,7 @@ public class PuzzleLights : MonoBehaviour
 {
     public Material material;
     Renderer rend;
+    public bool isComplete = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +16,12 @@ public class PuzzleLights : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void indicateCompletion() {
-        rend = GetComponent<Renderer> ();
-        rend.enabled = true;
-        rend.sharedMaterial = material;
+        rend = GetComponent<MeshRenderer> ();
+        //rend.enabled = true;
+        rend.material = material;
     }
 }

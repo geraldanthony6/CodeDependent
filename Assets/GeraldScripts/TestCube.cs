@@ -5,10 +5,10 @@ using Photon.Pun;
 
 public class TestCube : MonoBehaviour
 {
-    [SerializeField]private TestGameManager gameManager;
-    [SerializeField]private Material redMaterial;
+    [SerializeField]private Material greenMaterial;
     [SerializeField]private GameObject otherCube;
     [SerializeField]private Transform newPos;
+    [SerializeField]private GameObject light;
     public bool moveToNewPos = false;
     
     PhotonView _view;
@@ -26,20 +26,8 @@ public class TestCube : MonoBehaviour
         }
     }
 
-    
-
-    // private void OnCollisionEnter(Collision other) {
-        
-    //         if(other.gameObject.CompareTag("Player")){
-    //             gameManager.UpdateScore(1);
-    //             // Destroy(gameObject);
-    //         }
-        
-    // }
-
     private void OnTriggerEnter(Collider other) {
-        gameObject.GetComponent<MeshRenderer>().material = redMaterial;
-        otherCube.gameObject.GetComponent<TestCube>().moveToNewPos = true;
+        light.GetComponent<MeshRenderer>().material = greenMaterial;
     }
 
 

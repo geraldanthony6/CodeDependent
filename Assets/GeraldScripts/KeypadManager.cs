@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Photon.Pun;
 
 public class KeypadManager : MonoBehaviour
 {
@@ -14,13 +15,14 @@ public class KeypadManager : MonoBehaviour
     [SerializeField]private TextMeshProUGUI greenText;
     [SerializeField]private GameObject output;
     [SerializeField]private OverallPuzzleManager puzzleManager;
+    PhotonView _view;
     
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _view = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -29,7 +31,8 @@ public class KeypadManager : MonoBehaviour
         
     }
 
-    public void OnKeyPressed(string key){
+    [PunRPC]
+    private void OnKeyPressed(string key){
         Debug.Log("Key Pressed: " + key);
         if(currentCodeIndex == 3){
             currentCodeIndex = 0;
@@ -49,12 +52,13 @@ public class KeypadManager : MonoBehaviour
         }
     }
 
-    public void OnEnterPressed(){
+    [PunRPC]
+    private void OnEnterPressed(){
         Debug.Log("Enter Pressed");
         if(currentCode == correctCode){
             output.gameObject.GetComponent<Image>().color = Color.green;
             AudioManager.Instance.PlayRoomTwoCompletedAudio();
-            puzzleManager.complete(2);
+            puzzleManager.CompletePlayerTwoPuzzle(0);
         } else {
             output.gameObject.GetComponent<Image>().color = Color.red;
             currentCode = "";
@@ -63,5 +67,13 @@ public class KeypadManager : MonoBehaviour
             yellowText.text = "";
             greenText.text = "";
         }
+    }
+
+    public void CallOnKeyPressed(string key){
+        _view.RPC("OnKeyPressed", RpcTarget.All, key);
+    }
+
+    public void CallOnEnterPressed(){
+        _view.RPC("OnEnterPressed", RpcTarget.All);
     }
 }

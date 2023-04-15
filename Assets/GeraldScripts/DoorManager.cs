@@ -19,4 +19,5 @@ public class DoorManager : MonoBehaviour
     public void OpenDoor(Door door){
         door.ChangeOpening();
     }
+    
 }

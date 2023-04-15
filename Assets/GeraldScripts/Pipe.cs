@@ -6,6 +6,7 @@ public class Pipe : MonoBehaviour
 {
     [SerializeField]private Door correctDoor;
     [SerializeField]private Door wrongDoor;
+    [SerializeField]private PuzzleLights puzzleLight;
     public Transform pipeEnd;
     public bool isCorrectPipe = false;
     // Start is called before the first frame update
@@ -25,7 +26,7 @@ public class Pipe : MonoBehaviour
             correctDoor.ChangeOpening();
             other.transform.position = pipeEnd.position;
             AudioManager.Instance.PlayRoomOneCompletedAudio();
-            
+            puzzleLight.indicateCompletion();
         } else if(other.CompareTag("Ball") && !isCorrectPipe){
             wrongDoor.ChangeOpening();
             other.transform.position = pipeEnd.position;
