@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using Photon.Pun;
 
+//Being edited by Gerald
+
 public class OverallPuzzleManager : MonoBehaviour
 {
     public static OverallPuzzleManager instance;

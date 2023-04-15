@@ -6,8 +6,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
     [SerializeField]private AudioSource _roomOneAudioSource;
-    [SerializeField]private AudioClip _roomOneCompletedAudioClip;
-    [SerializeField]private AudioClip _roomTwoCompletedAudioClip;
+    [SerializeField]private AudioSource _roomOneCompletedAudioSource;
+    [SerializeField]private AudioSource _roomTwoCompletedAudioSource;
 
     private void Awake() {
         if(!Instance){
@@ -28,12 +28,10 @@ public class AudioManager : MonoBehaviour
     }
 
     public void PlayRoomOneCompletedAudio(){
-        _roomOneAudioSource.clip = _roomOneCompletedAudioClip;
-        _roomOneAudioSource.Play();
+        _roomOneCompletedAudioSource.Play();
     }
 
     public void PlayRoomTwoCompletedAudio(){
-        _roomOneAudioSource.clip = _roomTwoCompletedAudioClip;
-        _roomOneAudioSource.Play();
+        _roomTwoCompletedAudioSource.Play();
     }
 }

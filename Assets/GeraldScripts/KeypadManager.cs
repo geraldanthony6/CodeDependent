@@ -13,6 +13,7 @@ public class KeypadManager : MonoBehaviour
     [SerializeField]private TextMeshProUGUI yellowText;
     [SerializeField]private TextMeshProUGUI greenText;
     [SerializeField]private GameObject output;
+    [SerializeField]private OverallPuzzleManager puzzleManager;
     
     
 
@@ -53,6 +54,7 @@ public class KeypadManager : MonoBehaviour
         if(currentCode == correctCode){
             output.gameObject.GetComponent<Image>().color = Color.green;
             AudioManager.Instance.PlayRoomTwoCompletedAudio();
+            puzzleManager.complete(2);
         } else {
             output.gameObject.GetComponent<Image>().color = Color.red;
             currentCode = "";

@@ -18,7 +18,7 @@ public class TestButton : MonoBehaviour
         
     }
     private void OnTriggerEnter(Collider other) {
-        if(other.CompareTag("Player")){
+        if(other.CompareTag("Ball")){
             doorToOpen.GetComponent<Door>().opening = true;
         } 
     }

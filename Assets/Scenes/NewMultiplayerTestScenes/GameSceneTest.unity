@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03135467, g: 0.009841843, b: 0.013035885, a: 1}
+  m_IndirectSpecularColor: {r: 0.03135459, g: 0.009836971, b: 0.013035483, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1697,7 +1697,7 @@ GameObject:
   - component: {fileID: 102513130}
   - component: {fileID: 102513129}
   m_Layer: 0
-  m_Name: Puzzle3
+  m_Name: Player2Puzzle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1809,7 +1809,7 @@ GameObject:
   - component: {fileID: 102621692}
   - component: {fileID: 102621691}
   m_Layer: 0
-  m_Name: Puzzle1
+  m_Name: Player2Puzzle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2671,7 +2671,7 @@ GameObject:
   - component: {fileID: 171988125}
   - component: {fileID: 171988124}
   m_Layer: 0
-  m_Name: Puzzle2
+  m_Name: Player1Puzzle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5266,7 +5266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &570331598
 Transform:
   m_ObjectHideFlags: 0
@@ -5298,7 +5298,7 @@ GameObject:
   - component: {fileID: 578646096}
   - component: {fileID: 578646095}
   m_Layer: 0
-  m_Name: Puzzle2
+  m_Name: Palyer2Puzzle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7222,7 +7222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 811557284}
   m_Layer: 0
-  m_Name: Lights
+  m_Name: Player2Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10065,7 +10065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1154469754}
   m_Layer: 0
-  m_Name: Lights (1)
+  m_Name: Player1Lights (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12850,7 +12850,7 @@ GameObject:
   - component: {fileID: 1505961182}
   - component: {fileID: 1505961181}
   m_Layer: 0
-  m_Name: Puzzle1
+  m_Name: Player1Puzzle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15119,6 +15119,7 @@ MonoBehaviour:
   yellowText: {fileID: 665683085}
   greenText: {fileID: 644866873}
   output: {fileID: 105262344}
+  puzzleManager: {fileID: 0}
 --- !u!114 &1718629043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15132,10 +15133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _roomOneAudioSource: {fileID: 2022760385}
-  _roomOneCompletedAudioClip: {fileID: 8300000, guid: 46dffbd826fcb85428290c9109bf823b,
-    type: 3}
-  _roomTwoCompletedAudioClip: {fileID: 8300000, guid: 897ab8e96f2c450478a1e9b8ef2b2c09,
-    type: 3}
+  _roomOneCompletedAudioSource: {fileID: 0}
+  _roomTwoCompletedAudioSource: {fileID: 0}
 --- !u!114 &1718629044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15149,9 +15148,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lights:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 102621691}
+  - {fileID: 578646095}
+  - {fileID: 102513129}
   completeMat:
   - {fileID: 2100000, guid: 5055c7523ad1ed842803faa7190d7a52, type: 2}
 --- !u!1 &1721532729
@@ -15947,7 +15946,7 @@ GameObject:
   - component: {fileID: 1843567035}
   - component: {fileID: 1843567034}
   m_Layer: 0
-  m_Name: Puzzle3
+  m_Name: Player1Puzzle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18313,7 +18312,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5323871806057415575, guid: abb38b7f211c2b643a348e3098f08f46, type: 3}
+  - {fileID: 2100000, guid: 5b0c4ab84778c7d418fc288f90e663ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18355,7 +18354,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6627747361382181646, guid: abb38b7f211c2b643a348e3098f08f46, type: 3}
+  - {fileID: 2100000, guid: 5b0c4ab84778c7d418fc288f90e663ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18966,9 +18965,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5918405264901911122, guid: abb38b7f211c2b643a348e3098f08f46, type: 3}
-  - {fileID: 7148517155486302299, guid: abb38b7f211c2b643a348e3098f08f46, type: 3}
-  - {fileID: -7437379020668138692, guid: abb38b7f211c2b643a348e3098f08f46, type: 3}
+  - {fileID: 2100000, guid: 5b0c4ab84778c7d418fc288f90e663ad, type: 2}
+  - {fileID: 2100000, guid: 5b0c4ab84778c7d418fc288f90e663ad, type: 2}
+  - {fileID: 2100000, guid: 5b0c4ab84778c7d418fc288f90e663ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19617,7 +19616,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6627747361382181646, guid: abb38b7f211c2b643a348e3098f08f46, type: 3}
+  - {fileID: 2100000, guid: e966717d695c36845bbc7964bcc31b7e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
