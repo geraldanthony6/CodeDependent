@@ -5,9 +5,9 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-    [SerializeField]private AudioSource _roomOneAudioSource;
-    [SerializeField]private AudioSource _roomOneCompletedAudioSource;
-    [SerializeField]private AudioSource _roomTwoCompletedAudioSource;
+    [SerializeField]private AudioSource _initialAudioSource;
+    [SerializeField]private AudioSource _puzzleOneCompletedAudioSource;
+    [SerializeField]private AudioSource _puzzleTwoCompletedAudioSource;
 
     private void Awake() {
         if(!Instance){
@@ -24,14 +24,14 @@ public class AudioManager : MonoBehaviour
     }
 
     public void PlayRoomOneAudioSource(){
-            _roomOneAudioSource.Play();   
+            _initialAudioSource.Play();   
     }
 
     public void PlayRoomOneCompletedAudio(){
-        _roomOneCompletedAudioSource.Play();
+        _puzzleOneCompletedAudioSource.Play();
     }
 
     public void PlayRoomTwoCompletedAudio(){
-        _roomTwoCompletedAudioSource.Play();
+        _puzzleTwoCompletedAudioSource.Play();
     }
 }

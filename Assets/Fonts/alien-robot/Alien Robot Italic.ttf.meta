@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 7f957267098f8784f9eb416a9a15b027
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Alien Robot
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: bb6672a33452e0f45a5b0be02f31b572, type: 3}
+  - {fileID: 12800000, guid: 6fedebb35ae395d40ad5a32e77e87f70, type: 3}
+  - {fileID: 12800000, guid: e34b2b8f4c48d5847adb915cc438f591, type: 3}
+  - {fileID: 12800000, guid: ce504e2d8e4c79f4dab0079b2619a6b4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

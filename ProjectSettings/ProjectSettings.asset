@@ -226,8 +226,8 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompan.CodeDependent
-    Standalone: com.DefaultCompany.com.unity.template.vr
+    Android: com.DefaultCompa.CodeDependent
+    Standalone: com.DefaultCompany.CodeDependent
   buildNumber:
     Standalone: 0
     iPhone: 0
