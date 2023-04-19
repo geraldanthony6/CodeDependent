@@ -8,17 +8,13 @@ public class PressurePlate : MonoBehaviour
     [SerializeField]private GameObject pressurePlateVisual;
     private bool done = false; 
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    void Start(){}
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Update(){}
 
+    // Function -> Called on player collision with pressure plate
+    // If pressure plate is NOT activated correctly yet, check if it should be
     private void OnTriggerEnter(Collider other) {
         Debug.Log("Stepped On");
         if(!(pressurePlateVisual.activeSelf)) {
@@ -29,6 +25,8 @@ public class PressurePlate : MonoBehaviour
         }
     }
 
+    //Function -> Called when player leaves pressure plate
+    // If the pressure plate was correct, it stays activated
     private void OnTriggerExit(Collider other) {
         if(!done) {
             if(other.CompareTag("Player")){
@@ -37,10 +35,12 @@ public class PressurePlate : MonoBehaviour
         }
     }
 
+    // Function -> Sets flag for pressure plate to stay lit
     public void stayLit() {
         done = true;
     }
 
+    // Function -> Resets 'stay lit' flag on screw up
     public void failure() {
         pressurePlateVisual.SetActive(false);
         done = false;
