@@ -13,6 +13,9 @@ public class TestGameManager : MonoBehaviourPunCallbacks
     [SerializeField]private GameObject playerTwo;
     [SerializeField]private List<GameObject> playerOneGameObjects;
     [SerializeField]private List<GameObject> playerTwoGameObjects;
+    [SerializeField]private bool keyPadPuzzleCompleted = false;
+    [SerializeField]private bool pipePuzzleCompleted = false;
+    [SerializeField]private bool pressurePlatePuzzleCompleted = false;
 
     private void Awake() {
         if(!Instance){
@@ -61,4 +64,30 @@ public class TestGameManager : MonoBehaviourPunCallbacks
     public List<GameObject> GetPlayerTwoObjects(){
         return playerTwoGameObjects;
     }
+
+    public void SetKeyPadPuzzleCompleted(bool completed){
+        keyPadPuzzleCompleted = completed;
+    }
+
+    public bool GetKeyPadPuzzleCompleted(){
+        return keyPadPuzzleCompleted;
+    }
+
+    public void SetPipePuzzleCompleted(bool completed){
+        pipePuzzleCompleted = completed;
+    }
+
+    public bool GetPipePuzzleCompleted(){
+        return pipePuzzleCompleted;
+    }
+
+    public void SetPressurePlatePuzzleCompleted(bool completed){
+        pressurePlatePuzzleCompleted = completed;
+    }
+
+    public bool GetPressurePlatePuzzleCompleted(){
+        return pressurePlatePuzzleCompleted;
+    }
+
+    
 }

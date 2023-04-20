@@ -59,6 +59,7 @@ public class KeypadManager : MonoBehaviour
             output.gameObject.GetComponent<Image>().color = Color.green;
             AudioManager.Instance.PlayRoomTwoCompletedAudio();
             puzzleManager.CompletePlayerTwoPuzzle(0);
+            TestGameManager.Instance.SetKeyPadPuzzleCompleted(true);
         } else {
             output.gameObject.GetComponent<Image>().color = Color.red;
             currentCode = "";

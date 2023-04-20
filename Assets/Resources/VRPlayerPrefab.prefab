@@ -1345,7 +1345,7 @@ MonoBehaviour:
   m_AllowAnchorControl: 1
   m_UseForceGrab: 0
   m_RotateSpeed: 180
-  m_TranslateSpeed: 1
+  m_TranslateSpeed: 20
   m_AnchorRotateReferenceFrame: {fileID: 0}
   m_AnchorRotationMode: 0
 --- !u!120 &6295290234941283742
