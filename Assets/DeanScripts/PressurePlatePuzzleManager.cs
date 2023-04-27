@@ -33,6 +33,8 @@ public class PressurePlatePuzzleManager : MonoBehaviour
                 Debug.Log(progress);
             } else {
                 done = true;
+                overallManager.CompletePlayerThreePuzzle(1);
+                TestGameManager.Instance.SetPressurePlatePuzzleCompleted(true);
             }
         } else {
             progress = 0;

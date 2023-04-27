@@ -33,6 +33,11 @@ public class OverallPuzzleManager : MonoBehaviour
     public void CompletePlayerTwoPuzzle(int i) {
         player2Lights[i].indicateCompletion();
     }
+    
+    public void CompletePlayerThreePuzzle(int i) {
+        player1Lights[i].indicateCompletion();
+        player2Lights[i].indicateCompletion();
+    }
 
     public void complete(int i) {
 

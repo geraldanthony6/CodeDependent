@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 4221496672755550255}
   - component: {fileID: 3022792397820369785}
   - component: {fileID: 1578410044283291115}
+  - component: {fileID: 901575781494669191}
   m_Layer: 6
   m_Name: XR Origin
   m_TagString: Player
@@ -485,6 +486,19 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!135 &901575781494669191
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854846890156264979}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 1, y: 1, z: 0}
 --- !u!1 &985717167574460577
 GameObject:
   m_ObjectHideFlags: 0
