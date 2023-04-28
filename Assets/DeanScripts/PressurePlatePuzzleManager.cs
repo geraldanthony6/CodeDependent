@@ -34,6 +34,7 @@ public class PressurePlatePuzzleManager : MonoBehaviour
             } else {
                 done = true;
                 overallManager.CompletePlayerThreePuzzle(1);
+                AudioManager.Instance.PlayRoomThreeCompletedAudio();
                 TestGameManager.Instance.SetPressurePlatePuzzleCompleted(true);
             }
         } else {

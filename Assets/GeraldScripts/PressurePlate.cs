@@ -6,6 +6,7 @@ public class PressurePlate : MonoBehaviour
 {
     [SerializeField]private PressurePlatePuzzleManager manager;
     [SerializeField]private GameObject pressurePlateVisual;
+    [SerializeField]private AudioSource pressurePlateAudio;
     private bool done = false; 
     // Start is called before the first frame update
     void Start(){}
@@ -22,6 +23,7 @@ public class PressurePlate : MonoBehaviour
         }
         if(other.CompareTag("Player")){
             pressurePlateVisual.SetActive(true);
+            pressurePlateAudio.Play();
         }
     }
 

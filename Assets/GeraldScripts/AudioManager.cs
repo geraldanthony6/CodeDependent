@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField]private AudioSource _initialAudioSource;
     [SerializeField]private AudioSource _puzzleOneCompletedAudioSource;
     [SerializeField]private AudioSource _puzzleTwoCompletedAudioSource;
+    [SerializeField]private AudioSource _puzzleThreeCompletedAudioSource;
 
     private void Awake() {
         if(!Instance){
@@ -33,5 +34,9 @@ public class AudioManager : MonoBehaviour
 
     public void PlayRoomTwoCompletedAudio(){
         _puzzleTwoCompletedAudioSource.Play();
+    }
+
+    public void PlayRoomThreeCompletedAudio(){
+        _puzzleThreeCompletedAudioSource.Play();
     }
 }

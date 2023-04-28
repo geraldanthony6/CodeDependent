@@ -34,6 +34,10 @@ public class TestGameManager : MonoBehaviourPunCallbacks
     void Update()
     {
         _scoreText.text = "Score: " + _score;
+        if(pressurePlatePuzzleCompleted && pipePuzzleCompleted && keyPadPuzzleCompleted){
+            Debug.Log("All puzzles completed");
+            //PhotonNetwork.LoadLevel("EndScene");
+        }
     }
     [PunRPC]
     public void SetPlayerOne(GameObject player){
