@@ -28,6 +28,7 @@ public class VRPlayerController : MonoBehaviour
     {   
         if(view.IsMine){  
             cameraOffset.SetActive(true);
+            playerVisual.SetActive(false);
             LocomotionSystem.enabled = true;
             ActionBasedContinuousMoveProvider.enabled = true;
             ActionBasedContinuousTurnProvider.enabled = true;

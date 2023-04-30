@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115582786fac08f40aaccf7c7c212c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerVisual: {fileID: 0}
+  playerVisual: {fileID: 3441800681440547924}
   cameraOffset: {fileID: 2110046221542307673}
   playerInfo: {fileID: 1506867366397800701}
   LocomotionSystem: {fileID: 8059465959884518313}
@@ -3903,6 +3903,12 @@ PrefabInstance:
 --- !u!4 &2632472555076079342 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 96f73403830ccf943a66803473da098e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2522810369286285573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3441800681440547924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 96f73403830ccf943a66803473da098e,
     type: 3}
   m_PrefabInstance: {fileID: 2522810369286285573}
   m_PrefabAsset: {fileID: 0}
