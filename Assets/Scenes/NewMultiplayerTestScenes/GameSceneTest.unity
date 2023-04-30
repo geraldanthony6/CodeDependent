@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03135459, g: 0.009836971, b: 0.013035483, a: 1}
+  m_IndirectSpecularColor: {r: 0.03135467, g: 0.009841843, b: 0.013035885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11453,7 +11453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &570331598
 Transform:
   m_ObjectHideFlags: 0
@@ -19768,7 +19768,7 @@ GameObject:
   - component: {fileID: 926309396}
   - component: {fileID: 926309395}
   - component: {fileID: 926309394}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CrateSide (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21582,7 +21582,7 @@ GameObject:
   - component: {fileID: 1035978378}
   - component: {fileID: 1035978377}
   - component: {fileID: 1035978376}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CrateSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21679,7 +21679,7 @@ GameObject:
   - component: {fileID: 1045107927}
   - component: {fileID: 1045107926}
   - component: {fileID: 1045107925}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CrateSide (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22265,7 +22265,7 @@ GameObject:
   - component: {fileID: 1074525431}
   - component: {fileID: 1074525430}
   - component: {fileID: 1074525429}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CrateSide (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26133,7 +26133,7 @@ GameObject:
   - component: {fileID: 1295117063}
   - component: {fileID: 1295117062}
   - component: {fileID: 1295117061}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CrateSide (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38046,7 +38046,7 @@ PrefabInstance:
     - target: {fileID: 4180628212795407670, guid: 8aba2ac7e0d5fef4cac6c0cb0bf766ce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -36.15
+      value: -35.004
       objectReference: {fileID: 0}
     - target: {fileID: 4180628212795407670, guid: 8aba2ac7e0d5fef4cac6c0cb0bf766ce,
         type: 3}
@@ -38378,7 +38378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961266592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.07, y: 1.89, z: -37.78}
+  m_LocalPosition: {x: 41.98, y: 1.89, z: -37.78}
   m_LocalScale: {x: 0.5, y: 0.037, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38593,7 +38593,7 @@ GameObject:
   - component: {fileID: 1970721457}
   - component: {fileID: 1970721456}
   - component: {fileID: 1970721455}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CrateSide (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40437,7 +40437,7 @@ GameObject:
   - component: {fileID: 2078374091}
   - component: {fileID: 2078374090}
   - component: {fileID: 2078374089}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CrateSide (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
