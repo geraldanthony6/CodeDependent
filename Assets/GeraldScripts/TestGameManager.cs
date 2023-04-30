@@ -11,11 +11,14 @@ public class TestGameManager : MonoBehaviourPunCallbacks
     [SerializeField]private int _score;
     [SerializeField]private GameObject playerOne;
     [SerializeField]private GameObject playerTwo;
+    [SerializeField]private Door p1Door;
+    [SerializeField]private Door p2Door;
     [SerializeField]private List<GameObject> playerOneGameObjects;
     [SerializeField]private List<GameObject> playerTwoGameObjects;
     [SerializeField]private bool keyPadPuzzleCompleted = false;
     [SerializeField]private bool pipePuzzleCompleted = false;
     [SerializeField]private bool pressurePlatePuzzleCompleted = false;
+    [SerializeField]private bool finalPuzzleCompleted = false;
 
     private void Awake() {
         if(!Instance){
@@ -34,9 +37,12 @@ public class TestGameManager : MonoBehaviourPunCallbacks
     void Update()
     {
         _scoreText.text = "Score: " + _score;
-        if(pressurePlatePuzzleCompleted && pipePuzzleCompleted && keyPadPuzzleCompleted){
+        if(pressurePlatePuzzleCompleted && pipePuzzleCompleted && keyPadPuzzleCompleted && !finalPuzzleCompleted){
             Debug.Log("All puzzles completed");
-            //PhotonNetwork.LoadLevel("EndScene");
+            p1Door.ChangeOpening();
+            p2Door.ChangeOpening();
+            AudioManager.Instance.PlayFinalRoomAudio();
+            finalPuzzleCompleted = true;
         }
     }
     [PunRPC]
